@@ -3,6 +3,8 @@
 
 A collection of bootstrap components, Easy to navigate and find options, customize etc.
 
+still working on it. There will be more in future !
+
 
 ## Acknowledgements
 
@@ -24,10 +26,10 @@ Please adhere to this project's `code of conduct`.
 If you have any feedback, please reach out to us at mavroslykosedu@proton.me
 ## Support
 
-For support, email fake@fake.com or join our Slack channel.
+For support, email mavroslykosedu@proton.me or join our Slack channel.
 
 
 ## Authors
 
-- [@octokatherine](https://www.github.com/octokatherine)
+- [@wolf-at-alone](https://www.github.com/wolf-at-alone)
 
