@@ -7,6 +7,82 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .class-section {
+            background-color: white;
+            border: 1px solid #e1e8f0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .display-example {
+            border: 2px dashed #c0d3e6;
+            margin: 10px 0;
+            padding: 10px;
+            position: relative;
+        }
+
+        .display-example::before {
+            content: attr(data-class);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            background-color: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .item {
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        .color-palette-1 {
+            background-color: #e6f2ff;
+            color: #1a5f7a;
+        }
+
+        .color-palette-2 {
+            background-color: #e6f3e6;
+            color: #2c5e2c;
+        }
+
+        .color-palette-3 {
+            background-color: #fff4e6;
+            color: #8c5e1e;
+        }
+
+        .explanation {
+            background-color: #f1f5f9;
+            border-left: 4px solid #4a90e2;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .detail-note {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        .flex-comparison {
+            border: 1px solid #e1e8f0;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        .grid-demo {
+            min-height: 300px;
+        }
+    </style>
 </head>
 
 <body>
@@ -106,7 +182,8 @@
         <hr>
         <div class="row my-5">
             <span style="height: 30px;" class="border border-0">border border-0</span>
-            <span style="height: 30px;" class="border border-top-0 my-2" style="height: 30px;">border border-top-0 my-2</span>
+            <span style="height: 30px;" class="border border-top-0 my-2" style="height: 30px;">border border-top-0
+                my-2</span>
             <span style="height: 30px;" class="border border-end-0 my-2">border border-end-0 my-2</span>
             <span style="height: 30px;" class="border border-bottom-0 my-2">border border-bottom-0 my-2</span>
             <span style="height: 30px;" class="border border-start-0 my-2">border border-start-0 my-2</span>
@@ -116,15 +193,19 @@
         <hr>
         <div class="row my-5">
             <span style="height: 30px;" class="border border-primary my-2">"border border-primary my-2</span>
-            <span style="height: 30px;" class="border border-primary-subtle my-2">border border-primary-subtle my-2</span>
+            <span style="height: 30px;" class="border border-primary-subtle my-2">border border-primary-subtle
+                my-2</span>
             <span style="height: 30px;" class="border border-secondary my-2">border border-secondary my-2</span>
-            <span style="height: 30px;" class="border border-secondary-subtle my-2">border border-secondary-subtle my-2</span>
+            <span style="height: 30px;" class="border border-secondary-subtle my-2">border border-secondary-subtle
+                my-2</span>
             <span style="height: 30px;" class="border border-success my-2">border border-success my-2</span>
-            <span style="height: 30px;" class="border border-success-subtle my-2">border border-success-subtle my-2</span>
+            <span style="height: 30px;" class="border border-success-subtle my-2">border border-success-subtle
+                my-2</span>
             <span style="height: 30px;" class="border border-danger my-2">border border-danger my-2</span>
             <span style="height: 30px;" class="border border-danger-subtle my-2">border border-danger-subtle my-2</span>
             <span style="height: 30px;" class="border border-warning my-2">border border-warning my-2</span>
-            <span style="height: 30px;" class="border border-warning-subtle my-2">border border-warning-subtle my-2</span>
+            <span style="height: 30px;" class="border border-warning-subtle my-2">border border-warning-subtle
+                my-2</span>
             <span style="height: 30px;" class="border border-info my-2">border border-info my-2</span>
             <span style="height: 30px;" class="border border-info-subtle my-2">border border-info-subtle my-2</span>
             <span style="height: 30px;" class="border border-light my-2">border border-light my-2</span>
@@ -165,7 +246,8 @@
             </div>
             <div class="row mt-2">
                 <div class="border border-success p-2 mb-2">This is default success border</div>
-                <div class="border border-success p-2 mb-2 border-opacity-75">This is 75% opacity ---> success border border border-success p-2 mb-2 border-opacity-75</div>
+                <div class="border border-success p-2 mb-2 border-opacity-75">This is 75% opacity ---> success border
+                    border border-success p-2 mb-2 border-opacity-75</div>
                 <div class="border border-success p-2 mb-2 border-opacity-50">This is 50% opacity success border</div>
                 <div class="border border-success p-2 mb-2 border-opacity-25">This is 25% opacity success border</div>
                 <div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>
@@ -184,57 +266,370 @@
         <hr>
         <h3 class="my-3 ">Radius</h3>
         <hr>
-        <div class="row row-cols-3 my-5">
+        <div class="row row-cols-auto my-5">
             <div style="overflow: hidden; display: inline-block;">
-                <img src="https://picsum.photos/200" class="rounded m-2" alt="...">
+                <img src="https://picsum.photos/150?grayscale" class="rounded m-2" alt="...">
             </div>
-            
+
             <div style="overflow: hidden; display: inline-block;">
-                <img src="https://picsum.photos/200" class="rounded-top m-2 img-fluid" alt="...">
+                <img src="https://picsum.photos/150?grayscale" class="rounded-top m-2 img-fluid" alt="...">
             </div>
-            
+
             <div style="overflow: hidden; display: inline-block;">
-                <img src="https://picsum.photos/200" class="rounded-end m-2" alt="...">
+                <img src="https://picsum.photos/150?grayscale" class="rounded-end m-2" alt="...">
             </div>
-            
+
             <div style="overflow: hidden; display: inline-block;">
-                <img src="https://picsum.photos/200" class="rounded-bottom m-2" alt="...">
+                <img src="https://picsum.photos/150?grayscale" class="rounded-bottom m-2" alt="...">
             </div>
-            
+
             <div style="overflow: hidden; display: inline-block;">
-                <img src="https://picsum.photos/200" class="rounded-start m-2" alt="...">
+                <img src="https://picsum.photos/150?grayscale" class="rounded-start m-2" alt="...">
             </div>
-            
+
             <div style="overflow: hidden; display: inline-block;">
-                <img src="https://picsum.photos/200" class="rounded-circle m-2" alt="...">
+                <img src="https://picsum.photos/150?grayscale" class="rounded-circle m-2" alt="...">
             </div>
-            
+
             <div style="overflow: hidden; display: inline-block;">
-                <img src="https://picsum.photos/200" class="rounded-pill m-2" alt="...">
+                <img src="https://picsum.photos/150?grayscale" class="rounded-pill m-2" alt="...">
             </div>
-            
+
 
         </div>
         <hr>
         <h3 class="my-3 ">Sizes</h3>
         <hr>
         <div class="row my-5">
-            <div class="row my-2 row-cols-3">
-                <img src="https://picsum.photos/200 " class="rounded-0 m-2" alt="...">
-                <img src="https://picsum.photos/200 " class="rounded-1 m-2" alt="...">
-                <img src="https://picsum.photos/200 " class="rounded-2 m-2" alt="...">
-                <img src="https://picsum.photos/200 " class="rounded-3 m-2" alt="...">
-                <img src="https://picsum.photos/200 " class="rounded-4 m-2" alt="...">
-                <img src="https://picsum.photos/200 " class="rounded-5 m-2" alt="...">
+            <div class="row my-2 row-cols-auto">
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-0 m-2" alt="...">
+                </div>
+
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-1 m-2" alt="...">
+                </div>
+
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-2 m-2" alt="...">
+                </div>
+
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-3 m-2" alt="...">
+                </div>
+
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-4 m-2" alt="...">
+                </div>
+
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-5 m-2" alt="...">
+                </div>
+
             </div>
-            <div class="row mt-2 row-cols-3">
-                <img src="https://picsum.photos/200 " class="rounded-bottom-1 m-2" alt="...">
-                <img src="https://picsum.photos/200 " class="rounded-start-2 m-2" alt="...">
-                <img src="https://picsum.photos/200 " class="rounded-end-circle m-2" alt="...">
-                <img src="https://picsum.photos/200 " class="rounded-start-pill m-2" alt="...">
-                <img src="https://picsum.photos/200 " class="rounded-5 rounded-top-0 m-2" alt="...">
+            <div class="row mt-2 row-cols-auto">
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-bottom-1 m-2" alt="...">
+                </div>
+
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-start-2 m-2" alt="...">
+                </div>
+
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-end-circle m-2" alt="...">
+                </div>
+
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-start-pill m-2" alt="...">
+                </div>
+
+                <div style="overflow: hidden; display: inline-block;">
+                    <img src="https://picsum.photos/150?grayscale" class="rounded-5 rounded-top-0 m-2" alt="...">
+                </div>
+
+            </div>
+
+        </div>
+        <hr>
+        <h1 class="my-5 text-center">Colors</h1>
+        <hr>
+
+        <hr>
+        <h3 class="my-3 ">Colorize text with color utilities.</h3>
+        <hr>
+        <div class="row my-5">
+            <p class="text-primary">.text-primary</p>
+            <p class="text-primary-emphasis">.text-primary-emphasis</p>
+            <p class="text-secondary">.text-secondary</p>
+            <p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+            <p class="text-success">.text-success</p>
+            <p class="text-success-emphasis">.text-success-emphasis</p>
+            <p class="text-danger">.text-danger</p>
+            <p class="text-danger-emphasis">.text-danger-emphasis</p>
+            <p class="text-warning bg-dark">.text-warning</p>
+            <p class="text-warning-emphasis">.text-warning-emphasis</p>
+            <p class="text-info bg-dark">.text-info</p>
+            <p class="text-info-emphasis">.text-info-emphasis</p>
+            <p class="text-light bg-dark">.text-light</p>
+            <p class="text-light-emphasis">.text-light-emphasis</p>
+            <p class="text-dark bg-white">.text-dark</p>
+            <p class="text-dark-emphasis">.text-dark-emphasis</p>
+
+            <p class="text-body">.text-body</p>
+            <p class="text-body-emphasis">.text-body-emphasis</p>
+            <p class="text-body-secondary">.text-body-secondary</p>
+            <p class="text-body-tertiary">.text-body-tertiary</p>
+
+            <p class="text-black bg-white">.text-black</p>
+            <p class="text-white bg-dark">.text-white</p>
+            <p class="text-black-50 bg-white">.text-black-50</p>
+            <p class="text-white-50 bg-dark">.text-white-50</p>
+        </div>
+        <hr>
+        <h1 class="my-5 text-center"></h1>
+        <hr>
+
+        <hr>
+        <h3 class="my-3 ">Subtractive</h3>
+        <hr>
+        <div class="row my-5">
+            <div class="row mb-2">
+                <div class="text-primary">This is default primary text</div>
+                <div class="text-primary" style="--bs-text-opacity: .5;">
+                    <div class="text-primary" style="--bs-text-opacity: .5;">This is 50% opacity primary text</div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="text-primary">This is default primary text</div>
+                <div class="text-primary text-opacity-75">This is 75% opacity primary text</div>
+                <div class="text-primary text-opacity-50">This is 50% opacity primary text</div>
+                <div class="text-primary text-opacity-25">This is 25% opacity primary text</div>
             </div>
         </div>
+        <hr>
+        <h1 class="my-5 text-center">Display</h1>
+        <hr>
+        <h3 class="my-3 ">Display classes</h3>
+        <hr>
+
+
+
+        <div class="container-fluid p-4">
+            <h1 class="mb-4 text-center">Bootstrap Display Classes Deep Dive</h1>
+
+            <!-- d-none -->
+            <div class="class-section">
+                <h3>d-none</h3>
+                <div class="display-example" data-class="d-none">
+                    <div class="d-none color-palette-1 item">Hidden Item</div>
+                    <div class="color-palette-2 item">Visible Item</div>
+                </div>
+                <div class="explanation">
+                    <strong>Completely Removes Element:</strong> The d-none class eliminates the element from the
+                    document flow entirely.
+                </div>
+            </div>
+
+            <!-- d-inline -->
+            <div class="class-section">
+                <h3>d-inline</h3>
+                <div class="display-example" data-class="d-inline">
+                    <div class="d-inline color-palette-1 item" style="width: 300px;">Inline Item 1</div>
+                    <div class="d-inline color-palette-2 item" style="width: 300px;">Inline Item 2</div>
+                    <div class="d-inline color-palette-3 item" style="width: 300px;">Inline Item 3</div>
+                </div>
+                <div class="explanation">
+                    <strong>Flow Like Text:</strong> d-inline ignores width/height settings, flows like text, and allows
+                    multiple elements on the same line.
+                    <div class="detail-note">Note: Cannot set width or height directly</div>
+                </div>
+            </div>
+
+            <!-- d-inline-block -->
+            <div class="class-section">
+                <h3>d-inline-block</h3>
+                <div class="display-example" data-class="d-inline-block">
+                    <div class="d-inline-block color-palette-1 item" style="width: 300px;">Inline-Block Item 1</div>
+                    <div class="d-inline-block color-palette-2 item" style="width: 300px;">Inline-Block Item 2</div>
+                    <div class="d-inline-block color-palette-3 item" style="width: 300px;">Inline-Block Item 3</div>
+                </div>
+                <div class="explanation">
+                    <strong>Respects Dimensions:</strong> d-inline-block allows setting width/height while remaining
+                    inline.
+                </div>
+            </div>
+
+            <!-- d-block -->
+            <div class="class-section">
+                <h3>d-block</h3>
+                <div class="display-example" data-class="d-block">
+                    <div class="d-block color-palette-1 item">Block Item 1</div>
+                    <div class="d-block color-palette-2 item">Block Item 2</div>
+                    <div class="d-block color-palette-3 item">Block Item 3</div>
+                </div>
+                <div class="explanation">
+                    <strong>Full Width Stacking:</strong> d-block takes full width and stacks vertically.
+                </div>
+            </div>
+
+            <!-- d-grid -->
+            <div class="class-section">
+                <h3>d-grid</h3>
+                <div class="display-example" data-class="d-grid">
+                    <div class="d-grid gap-2" style="grid-template-columns: repeat(3, 1fr);">
+                        <div class="color-palette-1 item">Grid Item 1</div>
+                        <div class="color-palette-2 item">Grid Item 2</div>
+                        <div class="color-palette-3 item">Grid Item 3</div>
+                    </div>
+                </div>
+                <div class="explanation">
+                    <strong>Precise Grid Layout:</strong> d-grid creates a flexible grid with precise column/row
+                    control.
+                    <div class="detail-note">Uses CSS Grid for advanced layouts</div>
+                </div>
+            </div>
+
+            <!-- d-inline-grid -->
+            <div class="class-section">
+                <h3>d-inline-grid</h3>
+                <div class="display-example" data-class="d-inline-grid">
+                    <div class="d-inline-grid gap-2" style="grid-template-columns: repeat(3, 100px);">
+                        <div class="color-palette-1 item">Inline Grid 1</div>
+                        <div class="color-palette-2 item">Inline Grid 2</div>
+                        <div class="color-palette-3 item">Inline Grid 3</div>
+                    </div>
+                    <span>This text is next to the inline grid</span>
+                </div>
+                <div class="explanation">
+                    <strong>Grid Meets Inline:</strong> d-inline-grid creates a grid that flows with other inline
+                    content.
+                </div>
+            </div>
+            <!-- d-grid examples -->
+            <div class="class-section">
+                <h3>d-grid Comprehensive Demonstrations</h3>
+    
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Horizontal Grid</h5>
+                        <div class="display-example grid-demo" data-class="d-grid (Horizontal)">
+                            <div class="d-grid gap-2" style="grid-template-columns: repeat(3, 1fr);">
+                                <div class="color-palette-1 item">Column 1</div>
+                                <div class="color-palette-2 item">Column 2</div>
+                                <div class="color-palette-3 item">Column 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Vertical Grid</h5>
+                        <div class="display-example grid-demo" data-class="d-grid (Vertical)">
+                            <div class="d-grid gap-2" style="grid-template-rows: repeat(3, 100px);">
+                                <div class="color-palette-1 item">Row 1</div>
+                                <div class="color-palette-2 item">Row 2</div>
+                                <div class="color-palette-3 item">Row 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h5>Mixed Grid (Columns and Rows)</h5>
+                        <div class="display-example grid-demo" data-class="d-grid (Mixed)">
+                            <div class="d-grid gap-2" style="grid-template: 100px 100px / 1fr 1fr 1fr;">
+                                <div class="color-palette-1 item">Item 1</div>
+                                <div class="color-palette-2 item">Item 2</div>
+                                <div class="color-palette-3 item">Item 3</div>
+                                <div class="color-palette-1 item">Item 4</div>
+                                <div class="color-palette-2 item">Item 5</div>
+                                <div class="color-palette-3 item">Item 6</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Responsive Grid</h5>
+                        <div class="display-example grid-demo" data-class="d-grid (Responsive)">
+                            <div class="d-grid gap-2" style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));">
+                                <div class="color-palette-1 item">Auto</div>
+                                <div class="color-palette-2 item">Sizing</div>
+                                <div class="color-palette-3 item">Columns</div>
+                                <div class="color-palette-1 item">Adaptive</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="explanation">
+                    <strong>Grid Versatility:</strong> d-grid offers powerful layout options with precise control over rows,
+                    columns, and spacing.
+                    <div class="detail-note">Demonstrates horizontal, vertical, mixed, and responsive grid layouts</div>
+                </div>
+            </div>
+
+            <!-- d-flex and d-inline-flex -->
+            <div class="class-section">
+                <h3>d-flex vs d-inline-flex</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>d-flex</h5>
+                        <div class="display-example" data-class="d-flex">
+                            <div class="d-flex justify-content-between">
+                                <div class="color-palette-1 item flex-grow-1 m-1">Flex 1</div>
+                                <div class="color-palette-2 item flex-grow-1 m-1">Flex 2</div>
+                                <div class="color-palette-3 item flex-grow-1 m-1">Flex 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>d-inline-flex</h5>
+                        <div class="display-example" data-class="d-inline-flex">
+                            <div class="d-inline-flex">
+                                <div class="color-palette-1 item m-1">Inline Flex 1</div>
+                                <div class="color-palette-2 item m-1">Inline Flex 2</div>
+                                <div class="color-palette-3 item m-1">Inline Flex 3</div>
+                            </div>
+                            <span>This text is next to inline flex</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="explanation">
+                    <strong>Flex Variants:</strong>
+                    d-flex creates a full-width flex container,
+                    while d-inline-flex creates a flex container that flows with inline content.
+                </div>
+            </div>
+            <div class="class-section">
+                <h3>d-flex vs d-inline-flex Detailed Comparison</h3>
+                <div class="flex-comparison">
+                    <h5>d-flex Demonstration</h5>
+                    <div class="display-example" data-class="d-flex">
+                        <div class="d-flex bg-light p-2">
+                            <div class="color-palette-1 item flex-grow-1 m-1">Takes Full Width</div>
+                            <div class="color-palette-2 item flex-grow-1 m-1">Pushes Content Apart</div>
+                            <div class="color-palette-3 item flex-grow-1 m-1">Full Container Width</div>
+                        </div>
+                        <div class="detail-note">Notice how d-flex spans the entire width of its parent</div>
+                    </div>
+                </div>
+
+                <div class="flex-comparison">
+                    <h5>d-inline-flex Demonstration</h5>
+                    <div class="display-example" data-class="d-inline-flex">
+                        <div class="d-inline-flex bg-light p-2">
+                            <div class="color-palette-1 item m-1">Flows Inline</div>
+                            <div class="color-palette-2 item m-1">With Other Content</div>
+                            <div class="color-palette-3 item m-1">Like Text</div>
+                        </div>
+                        <span class="ms-2">This text sits next to inline-flex container</span>
+                        <div class="detail-note">Notice how it flows like an inline element</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
 
 
     </div>
