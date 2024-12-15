@@ -15,7 +15,7 @@
         }
 
         .class-section {
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             border: 1px solid #e1e8f0;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -24,7 +24,7 @@
         }
 
         .display-example {
-            border: 2px dashed #c0d3e6;
+            border: 2px dashed #c0d3e6a1;
             margin: 10px 0;
             padding: 10px;
             position: relative;
@@ -46,6 +46,7 @@
             padding: 10px;
             margin: 5px;
             font-weight: bold;
+            border: 1px solid #ddd;
         }
 
         .color-palette-1 {
@@ -80,8 +81,20 @@
             padding: 10px;
             margin-bottom: 15px;
         }
-        .grid-demo {
-            min-height: 300px;
+        
+        .flex-demo {
+            min-height: 250px;
+            border: 1px solid #e1e8f0;
+        }
+        .baseline-demo {
+            font-size: 16px;
+            line-height: 1;
+        }
+        .baseline-demo .small-text {
+            font-size: 12px;
+        }
+        .align-height{
+min-height: 180px;
         }
 </style>
 
@@ -92,7 +105,7 @@
         <hr>
 
         <hr>
-        <h3 class="my-3 ">Enable flex behaviors </h3>
+        <h3 class="my-3 ">Enable flex behaviors (ALL of the below classes are responsive too. use responsive classes) </h3>
         <hr>
         <div class="row my-5">
             <div class="class-section">
@@ -123,10 +136,172 @@
                 </div>
             </div>
         </div>
-        <hr>
-        <h3 class="my-3 ">Enable flex behaviors </h3>
-        <hr>
 
+         <!-- Align Items -->
+         <div class="class-section">
+            <h2>Align Items</h2>
+            
+            <div class="display-example" data-class="align-items-*">
+                <div class="d-flex align-items-start bg-light p-2 align-height">
+                    <div class="item color-palette-1">Start</div>
+                    <div class="item color-palette-2 h-100">Tall</div>
+                    <div class="item color-palette-3">Short</div>
+                    <div class=" detail-note m-5 mt-2 fs-5" >.align-items-start</div>
+                </div>
+                <div class="d-flex align-items-end bg-light p-2 mt-2 align-height">
+                    <div class="item color-palette-1">End</div>
+                    <div class="item color-palette-2 h-100">Tall</div>
+                    <div class="item color-palette-3">Short</div>
+                    <div class=" detail-note m-5 mb-2 fs-5" >.align-items-end</div>
+                </div>
+                <div class="d-flex align-items-center bg-light p-2 mt-2 align-height">
+                    <div class="item color-palette-1">Center</div>
+                    <div class="item color-palette-2 h-100">Tall</div>
+                    <div class="item color-palette-3">Short</div>
+                    <div class=" detail-note m-5 fs-5" >.align-items-center</div>
+                </div>
+                <div class="d-flex align-items-baseline bg-light p-2 mt-2  baseline-demo align-height">
+                    <div class="item color-palette-1">Baseline</div>
+                    <div class="item color-palette-2 small-text">Small Text</div>
+                    <div class="item color-palette-3">Normal</div>
+                    <div class=" detail-note m-5 fs-5" >.align-items-baseline</div>
+                </div>
+                <div class="d-flex align-items-stretch bg-light p-2 mt-2 align-height ">
+                    <div class="item color-palette-1">Stretch</div>
+                    <div class="item color-palette-2">Equal Height</div>
+                    <div class="item color-palette-3">Containers</div>
+                    <div class=" detail-note m-5 fs-5" >.align-items-stretch</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Align Self -->
+        <div class="class-section">
+            <h2>Align Self</h2>
+            
+            <div class="display-example" data-class="align-self-*">
+                <div class="d-flex bg-light p-2 flex-demo">
+                    <div class="item color-palette-1">Flex Item</div>
+                    <div class="item color-palette-2 align-self-start h-50">
+                        Aligned Flex Item
+                        <div class="text-muted mt-2">.align-self-start</div>
+                    </div>
+                    <div class="item color-palette-3">Flex Item</div>
+                </div>
+                <div class="d-flex bg-light p-2 mt-2 flex-demo">
+                    <div class="item color-palette-1">Flex Item</div>
+                    <div class="item color-palette-2 align-self-end h-50">
+                        Aligned Flex Item
+                        <div class="text-muted mt-2">.align-self-end</div>
+                    </div>
+                    <div class="item color-palette-3">Flex Item</div>
+                </div>
+                <div class="d-flex bg-light p-2 mt-2 flex-demo">
+                    <div class="item color-palette-1">Flex Item</div>
+                    <div class="item color-palette-2 align-self-center h-50">
+                        Aligned Flex Item
+                        <div class="text-muted mt-2">.align-self-center</div>
+                    </div>
+                    <div class="item color-palette-3">Flex Item</div>
+                </div>
+                <div class="d-flex bg-light p-2 mt-2 flex-demo baseline-demo">
+                    <div class="item color-palette-1">Flex Item</div>
+                    <div class="item color-palette-2 align-self-baseline small-text">
+                        Aligned Flex Item
+                        <div class="text-muted mt-2">.align-self-baseline</div>
+                    </div>
+                    <div class="item color-palette-3">Flex Item</div>
+                </div>
+                <div class="d-flex bg-light p-2 mt-2 flex-demo">
+                    <div class="item color-palette-1">Flex Item</div>
+                    <div class="item color-palette-2 align-self-stretch">
+                        Aligned Flex Item
+                        <div class="text-muted mt-2">.align-self-stretch</div>
+                    </div>
+                    <div class="item color-palette-3">Flex Item</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Justify Content -->
+        <div class="class-section">
+            <h2>Justify Content</h2>
+            
+            <div class="display-example" data-class="justify-content-*">
+                <div class="d-flex justify-content-start bg-light p-2 mb-2">
+                    <div class="item color-palette-1 me-2">Item 1</div>
+                    <div class="item color-palette-2">Item 2</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">.justify-content-start</div>
+                </div>
+                <div class="d-flex justify-content-end bg-light p-2 mb-2">
+                    <div class="item color-palette-1 me-2">Item 1</div>
+                    <div class="item color-palette-2">Item 2</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">.justify-content-end</div>
+                </div>
+                <div class="d-flex justify-content-center bg-light p-2 mb-2">
+                    <div class="item color-palette-1 me-2">Item 1</div>
+                    <div class="item color-palette-2">Item 2</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">.justify-content-center</div>
+                </div>
+                <div class="d-flex justify-content-between bg-light p-2 mb-2">
+                    <div class="item color-palette-1">Item 1</div>
+                    <div class="item color-palette-2">Item 2</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">.justify-content-between</div>
+                </div>
+                <div class="d-flex justify-content-around bg-light p-2 mb-2">
+                    <div class="item color-palette-1">Item 1</div>
+                    <div class="item color-palette-2">Item 2</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">.justify-content-around</div>
+                </div>
+                <div class="d-flex justify-content-evenly bg-light p-2 mb-2">
+                    <div class="item color-palette-1">Item 1</div>
+                    <div class="item color-palette-2">Item 2</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">.justify-content-evenly</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Auto Margins -->
+        <div class="class-section">
+            <h2>Auto Margins</h2>
+            
+            <div class="display-example" data-class="me-auto ms-auto">
+                <div class="d-flex mb-3">
+                    <div class="p-2 color-palette-1">Flex item</div>
+                    <div class="p-2 color-palette-2">Flex item</div>
+                    <div class="p-2 color-palette-3">Flex item</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">Default Flex</div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="me-auto p-2 color-palette-1">Flex item</div>
+                    <div class="p-2 color-palette-2">Flex item</div>
+                    <div class="p-2 color-palette-3">Flex item</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">.me-auto</div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="p-2 color-palette-1">Flex item</div>
+                    <div class="p-2 color-palette-2">Flex item</div>
+                    <div class="ms-auto p-2 color-palette-3">Flex item</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">.ms-auto</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flex Fill -->
+        <div class="class-section">
+            <h2>Flex Fill</h2>
+            
+            <div class="display-example" data-class="flex-fill">
+                <div class="d-flex">
+                    <div class="flex-fill p-2 color-palette-1">Flex fill item</div>
+                    <div class="flex-fill p-2 color-palette-2">Flex fill item</div>
+                    <div class="flex-fill p-2 color-palette-3">Flex fill item</div>
+                    <div class="position-absolute" style="top: 10px; right: 10px;">.flex-fill</div>
+                </div>
+            </div>
+        </div>
+
+       
 
 
 
